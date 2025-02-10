@@ -10,6 +10,11 @@ import lombok.extern.slf4j.Slf4j;
 @SpringBootApplication
 public class RestaurantMgntServiceApplication implements CommandLineRunner {
 
+	/* Important Notes:
+	 * 		1) Once Spring security added: Default Username: user and password can be seen in console log
+	 * 		
+	 */
+
 	public static void main(String[] args) {
 		SpringApplication.run(RestaurantMgntServiceApplication.class, args);
 	}
