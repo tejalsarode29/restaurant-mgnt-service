@@ -26,7 +26,7 @@ public class JwtUtil {
                     .signWith(getSigningKey(), SignatureAlgorithm.HS256).compact();
     }
 
-    private String generateToken(UserDetails details) {
+    public String generateToken(UserDetails details) {
         return generateToken(new HashMap<>(), details);
     }
 
@@ -57,7 +57,7 @@ public class JwtUtil {
     }
 
     private Key getSigningKey() {
-        byte[] keyBytes = Decoders.BASE64.decode("SldUU3VwZXJTZWNyZXQ=");
+        byte[] keyBytes = Decoders.BASE64.decode("lEIhIC3UwCj8T0cH+ie7oEgCe/t1/cKJYtrhsCwoxOgkjeQOr3WENY7pg7UPLNUc");
         return Keys.hmacShaKeyFor(keyBytes);
     }
 }

@@ -29,6 +29,16 @@ public class User implements UserDetails {
     private String name;
     private UserRole userRole;
 
+    public User() {
+    }
+
+    public User(Long id, String email, String name, UserRole userRole) {
+        this.id = id;
+        this.email = email;
+        this.name = name;
+        this.userRole = userRole;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(userRole.name()));
