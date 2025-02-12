@@ -30,6 +30,7 @@ public class AuthServiceImpl {
             adminUser.setEmail("admin@gmail.com");
             adminUser.setName("Admin");
             adminUser.setPassword(new BCryptPasswordEncoder().encode("admin"));
+            adminUser.setUserRole(UserRole.ADMIN);
             userRepository.save(adminUser);
             log.info("========= Admin Account is Created =========");
         } else {
@@ -52,5 +53,7 @@ public class AuthServiceImpl {
         return UserMapper.mapToDto(createdUSer);
 
     }
+
+    
 
 }
